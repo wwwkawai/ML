@@ -19,15 +19,15 @@ class nn:
     def train(self,inputs_list,labels_list):
         inputs=np.array(inputs_list,ndmin=2).T
         targets=np.array(labels_list,ndmin=2).T
-        hidden_inputs=np.dot(self.wi_h,inputs)
+        hidden_inputs=np.dot(self.wi_h,inputs)         #forward probagation
         hidden_outputs=self.activation_func(hidden_inputs)
         final_inputs=np.dot(self.wh_o,hidden_outputs)
-        final_outputs=self.activation_func(final_inputs)
+        final_outputs=self.activation_func(final_inputs    #calculate partial derivative
         out_put_error=targets-final_outputs
         hidden_error=np.dot(self.wh_o.T,out_put_error)
-        self.wh_o+=self.lr*np.dot((out_put_error*final_outputs*(1-final_outputs)),np.transpose(hidden_outputs))
+        self.wh_o+=self.lr*np.dot((out_put_error*final_outputs*(1-final_outputs)),np.transpose(hidden_outputs))  #renew weight
         self.wi_h+=self.lr*np.dot((hidden_error*hidden_outputs*(1-hidden_outputs)),np.transpose(inputs))
-        print(np.argmax(final_outputs)==np.argmax(labels_list))
+        #print(np.argmax(final_outputs)==np.argmax(labels_list))
     def test(self,inputs_list):
         inputs=inputs=np.array(inputs_list,ndmin=2).T
         hidden_inputs=np.dot(self.wi_h,inputs)
