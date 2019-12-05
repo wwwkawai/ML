@@ -1,3 +1,4 @@
+#simple neural network's implementation
 import numpy as np
 import pandas as pd
 import scipy.special
@@ -39,7 +40,7 @@ hidden_nodes=500
 output_nodes=10
 learning_rate=0.1
 model=nn(input_nodes,hidden_nodes,output_nodes,learning_rate)
-datamat=loaddata(r'C:\Users\87549\AppData\Local\Programs\Python\Python37\data\train.csv')
+datamat=loaddata(#filename)
 epochs=10
 for e in range(epochs):
     for data in datamat:
