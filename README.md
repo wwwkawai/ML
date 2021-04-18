@@ -1,2 +1,3 @@
 # ML
-recording of my process of machine learning
+implementation of machine learning algorithm using python
+1.LES
