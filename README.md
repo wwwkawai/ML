@@ -3,4 +3,6 @@ implementation of machine learning algorithm using python
 
 1.LSE
 
-2.NN
+2.Perceptron
+
+3.NN
