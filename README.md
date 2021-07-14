@@ -6,3 +6,5 @@ implementation of machine learning algorithm using python
 2.Perceptron
 
 3.NN
+
+4.Logistic regression
