@@ -8,3 +8,5 @@ implementation of machine learning algorithm using python
 3.NN
 
 4.Logistic regression
+
+5.LDA
